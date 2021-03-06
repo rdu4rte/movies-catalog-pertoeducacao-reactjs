@@ -105,7 +105,7 @@ const Login = ({
           <button
             onClick={submitCredentials}
             type="submit"
-            className="btn btn-success btn-block"
+            className="btn btn-dark btn-block"
           >
             Sign In
           </button>

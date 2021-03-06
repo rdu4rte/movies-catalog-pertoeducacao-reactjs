@@ -66,7 +66,7 @@ const NavBar = ({ auth: { isAuth, user }, logoutUser }) => {
 
   return (
     <nav className="navbar navbar-expand-md navbar-light">
-      <div className="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+      <div className="navbar-collapse collapse order-1 order-md-0 dual-collapse2">
         <ul className="navbar-nav mr-auto">{leftNavLinks()}</ul>
       </div>
       <div className="mx-auto order-0">
@@ -80,7 +80,7 @@ const NavBar = ({ auth: { isAuth, user }, logoutUser }) => {
           <span className="navbar-toggler-icon"></span>
         </button>
       </div>
-      <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <div className="navbar-collapse collapse order-3 dual-collapse2">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">{rightNavLinks()}</li>
         </ul>
