@@ -1,2 +1,74 @@
 // bootstrap
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// google fonts
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+
+// global styles
+$font-primary: "Bree Serif", serif;
+$font-secondary: "Merriweather", serif;
+$color-primary: #393b44;
+$color-secondary: #d6e0f0;
+$bg-primary: #f1f3f8;
+$bg-secondary: #1999b9;
+
+body {
+  background-color: $bg-primary;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-primary;
+}
+
+// navbar
+.navbar {
+  margin: 0 30px;
+  font-family: $font-primary;
+
+  img {
+    margin: 5px;
+    width: 100px;
+  }
+}
+
+// login
+.card {
+  font-family: $font-primary;
+  margin: 60px auto;
+  width: 350px;
+  box-shadow: 15px 15px 30px #363636;
+}
+
+.card h2 {
+  color: $color-primary;
+}
+
+form {
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.auth-title {
+  text-align: center;
+  padding: 10px;
+}
+
+.alert {
+  text-align: center;
+}
+
+// loading spinner
+.spinner-container {
+  text-align: center;
+  margin: 100px auto;
+  width: 500px;
+
+  .spinner-border {
+    width: 5rem;
+    height: 5rem;
+  }
+}
