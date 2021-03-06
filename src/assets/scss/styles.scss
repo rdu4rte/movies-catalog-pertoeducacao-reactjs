@@ -93,3 +93,36 @@ form {
     height: 5rem;
   }
 }
+
+// catalog
+.movies-container {
+  margin: 20px auto;
+
+  h1 {
+    margin: 5px auto;
+  }
+
+  .movie-img {
+    text-align: center;
+  }
+
+  .card-img-top {
+    margin: 25px auto 0;
+    width: 280px;
+    border-radius: 10px;
+  }
+}
+
+// movie details
+.video-detail {
+  margin: 60px auto 20px;
+
+  .col-sm {
+    margin: 15px;
+  }
+
+  p {
+    text-align: justify;
+    font-family: $font-secondary;
+  }
+}

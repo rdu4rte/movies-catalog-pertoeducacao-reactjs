@@ -6,6 +6,9 @@ import NavBar from "./components/layout/NavBar";
 import Home from "./components/Home";
 import store from "./redux/store";
 import Login from "./components/auth/Login";
+import Catalog from "./components/catalog/Catalog";
+import PrivateRoute from "./components/routing/PrivateRoute";
+import MovieDetail from "./components/catalog/MovieDetail";
 
 const App = () => {
   return (
@@ -17,6 +20,12 @@ const App = () => {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
+              <PrivateRoute exact path="/catalog" component={Catalog} />
+              <PrivateRoute
+                exact
+                path="/movie/detail/:id"
+                component={MovieDetail}
+              />
             </Switch>
           </div>
         </Fragment>

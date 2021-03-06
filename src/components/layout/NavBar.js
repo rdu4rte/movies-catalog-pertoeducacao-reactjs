@@ -34,7 +34,7 @@ const NavBar = ({ auth: { isAuth, user }, logoutUser }) => {
     <Fragment>
       <li className="nav-item active">
         <Link to="/lista" className="nav-link">
-          Hello, {user}!
+          {user}
         </Link>
       </li>
     </Fragment>
@@ -70,7 +70,9 @@ const NavBar = ({ auth: { isAuth, user }, logoutUser }) => {
         <ul className="navbar-nav mr-auto">{leftNavLinks()}</ul>
       </div>
       <div className="mx-auto order-0">
-        <img src={logo} alt="movies-catalog-logo" />
+        <Link to="/catalog">
+          <img src={logo} alt="movies-catalog-logo" />
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
