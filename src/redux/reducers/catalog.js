@@ -9,7 +9,7 @@ import {
 const initialState = {
   movieList: [],
   movie: {},
-  userList: [],
+  userList: null,
   loading: false,
 };
 
@@ -24,18 +24,24 @@ export default (state = initialState, action) => {
       };
     case SINGLE_MOVIE:
       return {
+        ...state,
         movie: action.payload,
         loading: false,
       };
     case FAV_MOVIE:
+      state.userList === null
+        ? (state.userList = [])
+        : (state.userList = [...state.userList]);
+
       return {
         ...state,
-        userList: [action.payload],
+        userList: [...state.userList, action.payload],
         loading: false,
       };
     case UNFAV_MOVIE:
       return {
         ...state,
+        userList: state.userList.filter((movie) => movie.id !== action.payload),
         loading: false,
       };
     case LOADING:

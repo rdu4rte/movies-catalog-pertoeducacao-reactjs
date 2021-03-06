@@ -20,15 +20,6 @@ export const Movie = ({ movie }) => {
         <h6 className="card-subtitle mb-2 text-muted">
           Genero: {movie.genero}
         </h6>
-        <p className="card-text">
-          Watch the trailer on YouTube:{" "}
-          <a
-            className="btn btn-floating"
-            href={"https://www.youtube.com/watch?v=" + movie.trailerIdYoutube}
-          >
-            <i className="fab fa-youtube"></i>
-          </a>
-        </p>
       </div>
     </div>
   );

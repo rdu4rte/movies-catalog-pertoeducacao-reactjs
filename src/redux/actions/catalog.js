@@ -2,8 +2,8 @@ import {
   FETCH_MOVIES,
   SINGLE_MOVIE,
   LOADING,
-  // FAV_MOVIE,
-  // UNFAV_MOVIE,
+  FAV_MOVIE,
+  UNFAV_MOVIE,
 } from "../types";
 import api from "../../helpers/api";
 import setToken from "../../helpers/setToken";
@@ -13,7 +13,6 @@ export const fetchMovies = () => async (dispatch) => {
 
   try {
     const res = await api.get("/filmes");
-    console.log(res.data);
 
     dispatch({
       type: FETCH_MOVIES,
@@ -39,7 +38,19 @@ export const getMovie = (id) => async (dispatch) => {
   }
 };
 
-export const favMovie = () => {};
+export const favMovie = (data) => (dispatch) => {
+  dispatch({
+    type: FAV_MOVIE,
+    payload: data,
+  });
+};
+
+export const unfavMovie = (id) => (dispatch) => {
+  dispatch({
+    type: UNFAV_MOVIE,
+    payload: id,
+  });
+};
 
 // load spinner
 export const setLoading = () => {

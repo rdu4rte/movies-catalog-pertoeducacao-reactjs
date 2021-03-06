@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -16,6 +17,11 @@ const Home = () => {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
+      <div className="contact-me">
+        <Link to="/contact" className="btn btn-info">
+          Contact me
+        </Link>
+      </div>
     </div>
   );
 };

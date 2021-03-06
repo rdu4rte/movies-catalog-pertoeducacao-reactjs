@@ -9,6 +9,8 @@ import Login from "./components/auth/Login";
 import Catalog from "./components/catalog/Catalog";
 import PrivateRoute from "./components/routing/PrivateRoute";
 import MovieDetail from "./components/catalog/MovieDetail";
+import UserList from "./components/catalog/UserList";
+import Contact from "./components/layout/Contact";
 
 const App = () => {
   return (
@@ -20,12 +22,14 @@ const App = () => {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/contact" component={Contact} />
               <PrivateRoute exact path="/catalog" component={Catalog} />
               <PrivateRoute
                 exact
                 path="/movie/detail/:id"
                 component={MovieDetail}
               />
+              <PrivateRoute exact path="/lista" component={UserList} />
             </Switch>
           </div>
         </Fragment>

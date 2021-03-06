@@ -24,6 +24,7 @@ h4 {
   font-family: $font-primary;
 }
 
+// home
 .home-page {
   margin: 100px auto 50px;
 
@@ -37,6 +38,11 @@ h4 {
     width: 500px;
     text-align: justify;
     font-family: $font-secondary;
+  }
+
+  .contact-me {
+    text-align: center;
+    font-family: $font-primary;
   }
 }
 
@@ -125,4 +131,107 @@ form {
     text-align: justify;
     font-family: $font-secondary;
   }
+
+  .btn {
+    font-family: $font-primary;
+  }
+}
+
+// user list
+.user-list {
+  margin: 0 auto;
+
+  h1,
+  h4 {
+    text-align: center;
+  }
+
+  .list-group {
+    margin: 10px auto;
+    width: 600px;
+  }
+
+  .list-group-item {
+    font-family: $font-secondary;
+    font-size: 1.2rem;
+    align-items: center;
+  }
+}
+
+// footer
+.contact {
+  width: auto;
+  margin: 20px auto 60px;
+  text-align: center;
+  color: $color-primary;
+
+  .me h3 {
+    font-family: $font-primary;
+    margin-bottom: 2px;
+    font-size: 1.8rem;
+  }
+
+  .cardMe {
+    font-family: $font-primary;
+    font-size: 1rem;
+    text-align: center;
+    margin: 18px auto 0;
+    width: 221px;
+  }
+
+  p {
+    margin: 2px auto 0;
+
+    a {
+      text-align: left;
+    }
+  }
+
+  .btn {
+    font-family: $font-primary;
+    box-shadow: 2px 2px 3px #363636;
+    margin: 10px;
+  }
+}
+
+// typewriter effect
+.twContainer {
+  margin: 80px auto 20px;
+  display: flex;
+  justify-content: center;
+}
+.twEffect .twText {
+  font-family: $font-primary;
+  font-size: 2.5rem;
+  overflow: hidden;
+  border-right: 0.12em solid #363636;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.3em;
+  animation: typing 2s steps(15, end), blink-caret 0.3s step-end infinite;
+}
+
+// typing effect
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+// typewriter cursor effect
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  35% {
+    border-color: $color-primary;
+  }
+}
+
+footer {
+  font-family: $font-primary;
 }
